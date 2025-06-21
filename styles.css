@@ -47,8 +47,8 @@ background-image: url("images/bg.png");
 
 /* ভেরিফাইড ব্যাজ স্টাইল */
 .verified-badge {
-  width: 22px;
-  height: 22px;
+  width: 18px;
+  height: 18px;
   margin-left: 5px;
   vertical-align: middle;
   position: relative;
