@@ -1,0 +1,178 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: white;
+  overflow-x: hidden;
+}
+
+.header {
+  background-color: #1f1f1f;
+  padding: 20px;
+  text-align: center;
+}
+
+.banner {
+  width: 100%;
+  max-width: 982px;
+  aspect-ratio: 327 / 121;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+.profile-section {
+  text-align: center;
+  padding: 20px;
+}
+
+.profile-img {
+  width: 80px; 
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.username { 
+  font-size: 22px; 
+  font-weight: bold; 
+}
+
+.handle { 
+  font-size: 14px; 
+  color: #aaa; 
+}
+
+.description {
+  margin-top: 0px;
+  font-size: 15px;
+  color: #ccc;
+  padding: 0 20px;
+  min-height: 4em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.typing {
+  text-align: center;
+}
+
+.typed-cursor {
+  opacity: 1;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.links-btn {
+  text-align: center; 
+  margin: 20px;
+}
+
+.links-btn button {
+  background-color: #2a2a2a;
+  color: white; 
+  padding: 12px 20px;
+  border: none; 
+  border-radius: 8px;
+  font-size: 16px; 
+  cursor: pointer;
+}
+
+.overlay {
+  position: fixed; 
+  top: 0; 
+  left: 0;
+  right: 0; 
+  bottom: 0;
+  background: rgba(0,0,0,0.6);
+  z-index: 900; 
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+
+.overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.bottom-sheet {
+  position: fixed; 
+  bottom: 0;
+  left: 0; 
+  width: 100%; 
+  height: 40vh;
+  min-height: 150px;
+  max-height: 90vh;
+  background-color: #1e1e1e;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  box-shadow: 0 -4px 10px rgba(0,0,0,0.4);
+  z-index: 1000;
+  display: flex; 
+  flex-direction: column;
+  touch-action: none;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.bottom-sheet.active {
+  transform: translateY(0);
+}
+
+.sheet-header {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  padding: 15px;
+  border-bottom: 1px solid #333;
+  cursor: ns-resize;
+  user-select: none;
+}
+
+.social-links {
+  flex: 1;
+  overflow-y: auto;
+  padding-bottom: 10px;
+}
+
+.social-links a {
+  display: block; 
+  text-decoration: none;
+  color: white; 
+  padding: 12px;
+  border-bottom: 1px solid #333;
+}
+
+.social-name {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.social-url {
+  font-size: 12px;
+  color: #aaa;
+  word-break: break-all;
+}
+
+.close-btn {
+  text-align: center;
+  padding: 10px;
+}
+
+.close-btn button {
+  background: #333;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
