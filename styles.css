@@ -45,23 +45,18 @@ background-image: url("images/bg.png");
   font-weight: bold; 
 }
 
+/* ভেরিফাইড ব্যাজ স্টাইল */
 .verified-badge {
-  display: inline-block;
-  width: 18px;
-  height: 18px;
-  background-color: #1DA1F2; /* Twitter-like blue */
-  color: white;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 18px;
-  font-size: 12px;
+  width: 22px;
+  height: 22px;
   margin-left: 5px;
   vertical-align: middle;
   position: relative;
+  display: inline-block;
 }
 
-/* টুলটিপ স্টাইল */
-.verified-badge::after {
+/* টুলটিপ ইফেক্ট */
+.verified-badge:hover::after {
   content: attr(title);
   position: absolute;
   bottom: 100%;
@@ -73,16 +68,17 @@ background-image: url("images/bg.png");
   border-radius: 4px;
   font-size: 12px;
   white-space: nowrap;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.2s;
+  z-index: 100;
 }
 
-.verified-badge:hover::after {
-  opacity: 1;
-  visibility: visible;
-  margin-bottom: 5px;
+/* ডিফল্ট SVG কালার ওভাররাইড */
+.verified-badge svg {
+  fill: #1DA1F2; /* Twitter blue */
 }
+
+/* কালার ভ্যারিয়েশন */
+.verified-badge.fb svg { fill: #1877F2; } /* Facebook blue */
+.verified-badge.ig svg { fill: #E1306C; } /* Instagram pink */
 
 .handle { 
   font-size: 14px; 
