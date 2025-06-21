@@ -6,13 +6,18 @@ body {
   overflow-x: hidden;
 }
 
+/*
+background-color: #FCF8F7;
+background-image: url("images/bg.png");
+*/
 .header {
-  background-color: #1f1f1f;
+  background-image: url("images/bg.png");
   padding: 20px;
   text-align: center;
 }
 
 .banner {
+  background-color: #fcf8f748;
   width: 100%;
   max-width: 982px;
   aspect-ratio: 327 / 121;
