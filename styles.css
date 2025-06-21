@@ -45,6 +45,45 @@ background-image: url("images/bg.png");
   font-weight: bold; 
 }
 
+.verified-badge {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background-color: #1DA1F2; /* Twitter-like blue */
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 18px;
+  font-size: 12px;
+  margin-left: 5px;
+  vertical-align: middle;
+  position: relative;
+}
+
+/* টুলটিপ স্টাইল */
+.verified-badge::after {
+  content: attr(title);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #333;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s;
+}
+
+.verified-badge:hover::after {
+  opacity: 1;
+  visibility: visible;
+  margin-bottom: 5px;
+}
+
 .handle { 
   font-size: 14px; 
   color: #aaa; 
